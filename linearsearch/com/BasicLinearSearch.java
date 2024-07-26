@@ -35,7 +35,7 @@ public class BasicLinearSearch
 
         if (result!=-1)
         {
-            System.out.println("Element present at index "+ result+1);
+            System.out.println("Element present at index "+ (result));
         }
         else
             System.out.println("Not found!");
