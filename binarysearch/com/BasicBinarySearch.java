@@ -7,9 +7,9 @@ public class BasicBinarySearch
 {
     public static int binarysearch(int[] array,int start,int end,int find)
     {
-        int mid=(start+end)/2;
-        while(start<end)
+        while(start<=end)
         {
+            int mid=(start+end)/2;
             if(array[mid]==find)
                 return mid;
             else if(array[mid]>find)
