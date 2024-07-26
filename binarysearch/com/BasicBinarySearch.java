@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BasicBinarySearch
 {
-    public static int binarysearch(int[] array,int start,int end,int find)
+    public static int binarysearchfirst(int[] array,int start,int end,int find)
     {
         int mid=(start+end)/2;
         while(start<end)
@@ -13,9 +13,9 @@ public class BasicBinarySearch
             if(array[mid]==find)
                 return mid;
             else if(array[mid]>find)
-                end=mid;
+                end=mid-1;
             else
-                start=mid;
+                start=mid+1;
         }
         return -1;
     }
@@ -36,7 +36,7 @@ public class BasicBinarySearch
         System.out.println("Enter the element to be searched:");
         int find=scannerObject.nextInt();
 
-        int result=binarysearch(array,0,array.length,find);
+        int result=binarysearchfirst(array,0,array.length,find);
 
         if (result!=-1)
         {
