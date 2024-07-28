@@ -24,8 +24,24 @@ public class Union
 
         ArrayList<Integer> union =new ArrayList<>();
 
-        union.addAll(list1);
-        union.addAll(list2);
+        for(int i:list1)
+        {
+            if(!list2.contains(i))
+            {
+                if(!union.contains(i))
+                {
+                    union.add(i);
+                }
+            }
+        }
+
+        for (int i:list2)
+        {
+                if(!union.contains(i))
+                {
+                    union.add(i);
+                }
+        }
 
         System.out.println("Union of elements are:");
         for(int i: union)
